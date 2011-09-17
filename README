@@ -1,0 +1,10 @@
+mvn deploy:deploy-file 
+		#this specifies the artificat and will (=should) match with your dependency-declaration in pom.xml	
+		-DgroupId=com.google.android.apps -DartifactId=analytics -Dversion=1.3.1 \ 
+		-Dpackaging=jar \ #deploy as jar 
+		-Dfile="libGoogleAnalytics.jar" \ #source file to deploy
+		-Durl=file:../../dev/mavenrepo/releases #target folder to deploy
+		
+
+mvn deploy:deploy-file -DgroupId=com.oracle -DartifactId=coherence -Dversion=3.7.0.0 -Dclassifier=javadoc -Dpackaging=jar -Dfile="coherence-javadoc.jar" -Durl=file:/workspace/maven-repo/releases
+
